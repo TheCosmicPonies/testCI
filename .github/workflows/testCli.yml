@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Compress simple website
-        run: tar cfz website.tgz ./
+        run: tar cfz website.tgz ./testCI.html
