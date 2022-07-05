@@ -7,3 +7,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Compress simple website
         run: tar cfz website.tgz ./testCI.html
+      - uses: actions/upload-artifact@v3
+        with:
+          name: new-artifact-saved
+          path: website.tgz
