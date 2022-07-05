@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Maven Compil
-        run: mvn package
+      - name: Compress simple website
+        run: tar cfz website.tgz ./testCI.html
       - uses: actions/upload-artifact@v3
         with:
           name: new-artifact-saved
-          path: /target/java-getting-started-1.0.jar
+          path: website.tgz
